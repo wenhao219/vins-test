@@ -1,0 +1,23 @@
+/* BookList.module.css */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd; /* Add border to the entire table */
+  }
+  
+  .table th, .table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Add border to each cell */
+    border-right: 1px solid #ddd; /* Add border between columns */
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Remove right border from last column */
+  .table th:last-child, .table td:last-child {
+    border-right: none;
+  }
+  
