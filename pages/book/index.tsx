@@ -49,7 +49,7 @@ const BookList: NextPage<BookListProps> = ({ books }) => {
                         <tr key={book.isbn}>
                             <td>
                                 <Link
-                                    href={`/book/${encodeURIComponent(book.isbn)}?title=${encodeURIComponent(book.title)}&author=${encodeURIComponent(book.author)}&genre=${encodeURIComponent(book.genre)}&description=${encodeURIComponent(book.description)}&published_date=${encodeURIComponent(book.published_date)}&image=${encodeURIComponent(book.image)}&publisher=${encodeURIComponent(book.publisher)}`}
+                                    href={`/book/${encodeURIComponent(book.isbn)}?title=${encodeURIComponent(book.title)}&isbn=${encodeURIComponent(book.isbn)}&author=${encodeURIComponent(book.author)}&genre=${encodeURIComponent(book.genre)}&description=${encodeURIComponent(book.description)}&published_date=${encodeURIComponent(book.published_date)}&image=${encodeURIComponent(book.image)}&publisher=${encodeURIComponent(book.publisher)}`}
                                 >
                                     {book.title}
                                 </Link>

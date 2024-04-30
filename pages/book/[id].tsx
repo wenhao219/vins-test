@@ -11,6 +11,7 @@ type Book = {
   description: string;
   published_date: string;
   image: string;
+  ISBN: string;
   publisher: string;
 };
 
@@ -22,7 +23,7 @@ const BookDetailsPage: NextPage = () => {
   useEffect(() => {
     if (id && typeof id === 'string') {
       // Decode query parameters from URL
-      const { title, author, genre, description, published_date, image, publisher } = router.query;
+      const { title, author, genre, description, published_date, image, publisher, isbn } = router.query;
       
       // Create book object from decoded data
       const decodedBook: Book = {
@@ -32,6 +33,7 @@ const BookDetailsPage: NextPage = () => {
         description: typeof description === 'string' ? decodeURIComponent(description) : '',
         published_date: typeof published_date === 'string' ? decodeURIComponent(published_date) : '',
         image: typeof image === 'string' ? decodeURIComponent(image) : '',
+        ISBN: typeof isbn === 'string' ? decodeURIComponent(isbn) : '',
         publisher: typeof publisher === 'string' ? decodeURIComponent(publisher) : '',
       };
 
@@ -49,6 +51,7 @@ const BookDetailsPage: NextPage = () => {
       <h1>Title: {book.title}</h1>
       <p><strong>Author:</strong> {book.author}</p>
       <p><strong>Genre:</strong> {book.genre}</p>
+      <p><strong>ISBN:</strong> {book.ISBN}</p>
       <p><strong>Description:</strong> {book.description}</p>
       <p><strong>Published Date:</strong> {book.published_date}</p>
       <p><strong>Publisher:</strong> {book.publisher}</p>
